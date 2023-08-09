@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 - 시장하시죠</title>
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- 초기화2 -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <!-- css 서식 -->
+  <link rel="stylesheet" href="css/login.css">
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- 제이쿼리 cdn -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      const che = $('.id_save img');
+
+    $('.chk').click(function() {
+        var src = $(this).attr('src');
+        if(src == './l_images/Rectangle_b.png'){
+            $(this).attr('src', './l_images/Rectangle_m.png');
+        } else if(src == './l_images/Rectangle_m.png'){
+            $(this).attr('src', './l_images/Rectangle_b.png');
+        }
+    });
+
+    });
+  </script>
+</head>
+<body>
+
+  <form name="폼이름" method="post" action="#">
+    <fieldset>
+      <legend>로그인 폼</legend>
+      <h1>
+        <a href="index.html" title="메인페이지로 바로가기">
+          <img src="./l_images/login_logo.png" alt="상단로고">
+        </a>
+      </h1>
+
+      <p>
+        <label for="id_txt">아이디 : </label><input type="text" maxlength="16" placeholder="아이디" id="id_txt">
+      </p>
+
+      <p>
+        <label for="pw_txt">패스워드 : </label><input type="password" maxlength="16" placeholder="패스워드" id="pw_txt">
+      </p>
+
+      <div class="find">
+        <p class="id_save">
+          <input type="checkbox" id="ch">
+          <img src="./l_images/Rectangle_b.png" alt="" class="chk">
+          <label for="ch">아이디 저장</label>
+        </p>
+
+        <p class="p01">
+          <a href="#" title="아이디 찾기">아이디 찾기</a>
+          <span>&#124;</span>
+          <a href="#" title="비밀번호 찾기">비밀번호 찾기</a>
+        </p>
+      </div>
+
+      <p>
+        <input type="button" value="로그인" id="login_btn">
+      </p>
+
+      <p class="p02">아직 시장하시죠 회원이 아닌가요? <a href="#" title="회원가입">회원가입</a></p>
+
+      <h2>간편로그인</h2>
+      <ul class="sns">
+        <li><a href="#" title="네이버 로그인">
+          <img src="./l_images/01_lg_naver.png" alt="">
+        </a></li>
+        <li><a href="#" title="카카오 로그인">
+          <img src="./l_images/02_lg_kakao.png" alt="">
+        </a></li>
+        <li><a href="#" title="구글 로그인">
+          <img src="./l_images/03_lg_google.png" alt="">
+        </a></li>
+        <li><a href="#" title="애플 로그인">
+          <img src="./l_images/04_lg_apple.png" alt="">
+        </a></li>
+      </ul>
+    
+      <footer>
+        <p>&copy; <strong>AREYOUHUNGRY</strong> All rights reserved.</p>
+      </footer>
+
+    </fieldset>
+  </form>
+
+  <script>
+    const login_btn = document.getElementById('login_btn');
+
+    // 로그인 버튼 클릭시 해당 내용 실행하기
+    login_btn.addEventListener('click', function(){
+
+    //로그인 체크 기능 구현하기
+    let id = document.getElementById('id_txt').value;
+    let pw = document.getElementById('pw_txt').value;
+
+    //테스트
+    console.log(id);
+    console.log(pw);
+
+    if(id=='admin'){
+      if(pw=='1234'){
+        alert('관리자님 반갑습니다. 로그인이 성공되었습니다.');
+      }else{
+        alert('패스워드가 맞지 않습니다. 다시 확인하세요.');
+        location.reload(); //새로고침 -> 로그인 입력창 텍스트 지워지게 만듬
+      }
+    }else{
+      alert('아이디가 맞지 않습니다. 다시 확인하세요.');
+      location.reload();
+    }
+
+  });
+
+  </script>
+</body>
+</html>

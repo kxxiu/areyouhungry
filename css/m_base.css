@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+@import url('./normalize.css');
+@import url('reset.css');
+
+/* font-family: 'Noto Sans KR'; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'establishRoomNo703OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRoomNo703OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MYYeongnamnu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYYeongnamnu.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --main-color: #492B23;
+  --text-color: #333333;
+  --footer-color: #F0F0F0;
+}
+
+/* Layout */
+.d-flex{display: flex;}
+.hidden{
+  content: '';
+  display: block;
+  width: 1px;height: 1px;
+  text-indent: -9999px;
+}
+.none{display: none;}
+.sprite{
+  display: inline-block;
+  background-image: url(../m_images/sp_icons.png);
+  background-size: 660px 165px;
+  background-repeat: no-repeat;
+}
+.h-font{
+  padding-left: 17px;
+  font-size: 1.5rem;
+  font-family: 'Cafe24Ssurround', sans-serif;
+  line-height: 50px;
+}
+
+/* jQery */
+.on{
+  transform: rotate(180deg) translate(-30px);
+}
+.on2{
+  transform: rotate(180deg) translate(10px);
+}
+.close{
+  transform: rotate(360deg);
+}
+.color {
+  background: #D4E8E6;
+}
+.show {display: block;}
+.act-c{color: #4E937E !important;}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--text-color);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px
+}
+a{
+  color: var(--text-color);
+  font-style: normal;
+  text-decoration: none;
+}
+address{font-style: normal;}
+main{
+  padding-top: 60px;
+  flex: 1;
+}

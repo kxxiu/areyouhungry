@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/* 폰트 설정 */
+@font-face {
+  font-family: 'Cafe';
+  src: url('../font/Cafe24Ssurround.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Room';
+  src: url('../font/Room\ No.703.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BMJUA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+
+/* 헤더 애니메이션 */
+@keyframes ani{
+  0%{top:30px;opacity: 0;}
+  100%{top:0px;opacity: 1;}
+}
+
+.act::after {
+  display: block;
+  width: 10px; height: 10px;
+  content: '';
+  border-radius: 50%;
+  background: #271919;
+  position: absolute;
+  right: 10px; top: 30px;
+  animation: ani 1s;
+  animation-fill-mode: forwards;
+}
+
+/* 시장 찾기 아이콘 애니메이션 */
+@keyframes pro-img {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes pro-img-float {
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce:focus {
+  animation-name: pro-img-float, pro-img;
+  animation-duration: .3s, 1.5s;
+  animation-delay: 0s, .3s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+  animation-direction: normal, alternate;
+}
+
+/* 인스타그램 애니메이션 */
+
+@keyframes rotate {
+  0% {transform: rotate(0);}
+  50% {transform: rotate(5deg);}
+  100% {transform: rotate(0);}
+}
+
+/* 리셋 추가 서식 */
+
+a {text-decoration: none; color: #333;}
+input {
+  border: none;
+  background: none;
+}
+body {
+  color: var(--base-color);
+  font-family: 'Noto Sans KR', arial, sans-serif;
+}
+
+/* 변수 */
+:root {
+  --base-font: 14px;
+  --base-lh: 27px;
+  --main-font: 'Cafe';
+  --accent-font: 'Room';
+  --base-color: #333;
+  --line-color: #61AD96;
+  --mint-color: #D4E8E6;
+  --acctent-color: #271919;
+}
+
+/* 클래스 */
+.hidden {display: none;}
+.blind {text-indent: -9999999;}
+.df {display: flex;}
+.sprite {background-image: url(../icons/sprite.png);}
+.on {
+  background: #fff !important;
+  border: 2.5px solid #61AD96;
+  color: #61AD96;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.on2 {
+  border: 3px solid rgba(97,173,150) !important;
+}
+.act2 {
+  color: #61AD96;
+  font-weight: bold;
+}
+.popup {
+  /* opacity: 1 !important; */
+  /* scale:1.2; */
+  z-index: 4;
+}
+.popup2 {
+  background-position-y: -47px !important;
+  color: #fff;
+}
+.show{display: block;}
+.pstyle {
+  font-size: 12px;
+  color: #636262;
+  font-weight: normal;
+  display: none;
+}
+.p02 {display: block;}
+
+
+

@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시장하시죠</title>
+    <!-- 1. 초기화 -->
+    <link href="./css/reset.css" type="text/css" rel="stylesheet">
+
+    <!-- 2. 공통서식 (pc, mobile) -->
+    <link href="./css/base.css" type="text/css" rel="stylesheet">
+  
+    <!-- 3. 공통 레이아웃 (layout) -->
+    <link href="./css/layout.css" type="text/css" rel="stylesheet">
+  
+    <!-- 4. 메인콘텐츠 서식 -->
+    <link href="./css/main.css" type="text/css" rel="stylesheet">
+  
+    <!-- 5. 스와이퍼 플러그인 css -->
+    <link href="./css/swiper.css" type="text/css" rel="stylesheet">
+
+    <!-- 6. 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- 6. 구글폰트 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  
+    <!-- 7. 접두사 자동으로 붙여주는 스크립트 -->
+    <script src="./script/prefixfree.min.js"></script>
+  
+    <!-- 8. 제이쿼리 라이브러리  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon">
+
+  <script>
+    //네비게이션 마우스 호버 효과
+    $(document).ready(function(){
+
+      const gnb = $('.gnb> ul');
+      
+      gnb.hover(function(){
+        $('.h_wrap').stop().animate({'height':'370px'},300);
+
+      },function(){
+        $('.h_wrap').stop().animate({'height':'100px'},300);
+
+      });
+
+    
+    });
+  </script>
+
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="h_wrap">
+      <div class="h_inner df">
+        <h1>
+          <a href="index.html" title="메인페이지로 이동">
+            <img src="./icons/logo.png" alt="logo">
+          </a>
+        </h1>
+
+        <!-- navi -->
+        <div class="nav_wrap">
+          <nav class="gnb">
+            <ul class="df">
+              <li><a href="#">시장찾기</a></li>
+              <li><a href="#">시장투어</a>
+                <ul class="sub">
+                  <li><a href="#">시장정보</a></li>
+                  <li><a href="#">주변명소</a></li>
+                  <li><a href="#">추천코스</a></li>
+                  <li><a href="#">우리시장 자랑</a></li>
+                  <li><a href="#">신규상점</a></li>
+                </ul>
+              </li>
+              <li><a href="#">동네상점</a>
+                <ul class="sub">
+                  <li><a href="#">카테고리</a></li>
+                  <li><a href="#">인기상품</a></li>
+                  <li><a href="#">특산품</a></li>
+                  <li><a href="#">제철상품</a></li>
+                  <li><a href="#">공동구매</a></li>
+                </ul>
+              </li>
+              <li><a href="#">이벤트</a>
+                <ul class="sub">
+                  <li><a href="#">할인정보</a></li>
+                  <li><a href="#">공연,행사</a></li>
+                  <li><a href="#">시장뉴스</a></li>
+                </ul>
+              </li>
+              <li><a href="#">커뮤니티</a>
+                <ul class="sub">
+                  <li><a href="#">소셜미디어</a></li>
+                  <li><a href="#">별점후기</a></li>
+                  <li><a href="#">공지사항</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="random">
+              <img src="./images/gnbrandom01.png" alt="" id="gnb_img">
+              <p>가고 싶은 시장을<br>검색해보세요</p>
+            </div>
+          </nav>
+        </div>
+
+
+        <!-- 검색바 -->
+        <fieldset>
+          <legend class="hidden">검색폼</legend>
+          <div class="search">
+            <input type="search" id="search" placeholder="검색어를 입력하세요." maxlength="50">
+            <label for="search" class="fas fa-search">
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- lnb -->
+        <nav class="lnb">
+          <ul class="df">
+            <li>
+              <a href="#" title="언어설정">
+                <span class="material-symbols-outlined">language</span>
+              </a>
+            </li>
+            <li>
+              <a href="./login.html" title="로그인">
+                <i class="fa-regular fa-user"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="위치기반">
+                <span class="material-symbols-outlined">location_on</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div> <!--//.h_inner-->
+    </div> <!--//.h_wrap-->
+  </header>
+
+  <!-- main -->
+  <main>
+    <!-- 1. main slide -->
+    <section class="slide">
+      <h2 class="hidden">slide</h2>
+      <ul class="slide_wrap">
+        <li>
+          <a href="#">
+            <img src="./images/banner01.png" alt="">
+            <div class="txt_box">
+              <p>시장하시죠?<br>
+                그렇다면 <strong>시장하시죠</strong>에서<br>
+                넘치는 정과 인심을 느껴보시죠!</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/banner02.png" alt="">
+            <div class="txt_box">
+              <p>어느 시장이<br> 
+                가장 가까울까?<br>
+                해답은 <strong>시장하시죠</strong>에서</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/banner03.png" alt="">
+            <div class="txt_box">
+              <p>시장하시죠만의 <strong>이벤트</strong>!<br>
+                신규회원에게<br>
+                온누리 상품권이 펑펑!</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/banner04.png" alt="">
+            <div class="txt_box">
+              <p>제철상품이 궁금하다면?<br>
+                시장하시죠의 <strong>동네상점</strong>에서<br>
+                특가로 만나보세요</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <ul class="c_btn df">
+        <li class="progress-bar-wrap">
+          <div class="progress-bar"></div>
+        </li>
+        <li class="pagination"></li>
+        <li><i class="fas fa-angle-left"></i></li>
+        <li><i class="fas fa-pause"></i></li>
+        <li><i class="fas fa-angle-right"></i></li>
+      </ul>
+    </section>
+
+    <!-- 2. find -->
+    <section class="find">
+      <h2 class="hidden">시장찾기전체</h2>
+      <article class="find_wrap">
+        <h3 class="hidden">시장 찾기</h3>
+        <!-- find_map -->
+        <article class="find_map df">
+          <h4 class="hidden">시장지도</h4>
+          <div class="find_map_txt">
+            <h4>지역별 시장정보</h4>
+            <p>지도를 클릭 하여<br>시장정보를 확인하세요.</p>
+          </div>
+          <img src="./images/map.png" alt="">
+          <div class="map_icons">
+            <a href="#" class="m1 bounce"><span>서울</span></a>
+            <a href="#" class="m2 bounce"><span>경기</span></a>
+            <a href="#" class="m3 bounce"><span>인천</span></a>
+            <a href="#" class="m4 bounce"><span>강원</span></a>
+            <a href="#" class="m5 bounce"><span>충북</span></a>
+            <a href="#" class="m6 bounce"><span>경북</span></a>
+            <a href="#" class="m7 bounce"><span>대구</span></a>
+            <a href="#" class="m8 bounce"><span>충남</span></a>
+            <a href="#" class="m9 bounce"><span>전북</span></a>
+            <a href="#" class="m10 bounce"><span>광주</span></a>
+            <a href="#" class="m11 bounce"><span>경남</span></a>
+            <a href="#" class="m12 bounce"><span>부산</span></a>
+            <a href="#" class="m13 bounce"><span>전남</span></a>
+            <a href="#" class="m14 bounce"><span>제주</span></a>
+          </div>
+          
+          <ul>
+            <li class="c1"><img src="./images/seoul.png" alt="서울1"></li>
+            <li class="c2"><img src="./images/seoul.png" alt="경기2"></li>
+            <li class="c3"><img src="./images/incheon.png" alt="인천3"></li>
+            <li class="c4"><img src="./images/gangwon.png" alt="강원4"></li>
+            <li class="c5"><img src="./images/chungbuk.png" alt="충북5"></li>
+            <li class="c6"><img src="./images/gyeongbug.png" alt="경북6"></li>
+            <li class="c7"><img src="./images/gyeongbug.png" alt="대구7"></li>
+            <li class="c8"><img src="./images/chungnim.png" alt="충남8"></li>
+            <li class="c9"><img src="./images/jeonbuk.png" alt="전북9"></li>
+            <li class="c10"><img src="./images/gyeongju.png" alt="광주10"></li>
+            <li class="c11"><img src="./images/busan.png" alt="경남11"></li>
+            <li class="c12"><img src="./images/busan.png" alt="부산12"></li>
+            <li class="c13"><img src="./images/gyeongju.png" alt="전남13"></li>
+            <li class="c14"><img src="./images/Jeju.png" alt="제주14"></li>
+          </ul>
+        </article>
+
+        <!-- l-content  -->
+        <div class="l-content">
+          <div class="l-wrap seoul-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_seoul.jpg" alt="광장시장">
+            </a>
+              <h3>광장시장</h3>
+              <ul>
+                <li><i class="fa-solid fa-location-dot"></i>서울 종로구 창경궁로 88</li>
+                <li><i class="fa-solid fa-clock"></i>오전 9:00~오후 6:00</li>
+                <li><i class="fa-solid fa-phone"></i><a href="tel:02-2267-0291">02-2267-0291</a></li>
+              </ul>
+              <p>서울 최대 규모의 재래시장, 대한민국 최초의 전통시장! 수많은 할리우드 스타들도 내한하면 찾은 명소로 유명하다. 다양한 먹거리를 즐기고 싶다면 광장시장에 가보시는 건 어떤가요?</p>
+              <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap gyeonggi-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_gyeonggi.jpg" alt="파주금촌통일시장">
+            </a>
+              <h3>파주금촌통일시장</h3>
+              <ul>
+                <li><i class="fa-solid fa-location-dot"></i>경기 파주시 금정24길 18-7</li>
+                <li><i class="fa-solid fa-clock"></i>오전 9:00~오후 6:00</li>
+                <li><i class="fa-solid fa-phone"></i><a href="tel:031-941-2470">031-941-2470</a></li>
+              </ul>
+              <p>전통과 현대가 잘 어우러진 금촌통일시장<br>매달 둘째 주 토요일과 일요일에는 '금촌문화난장'이라는 어울림 장터까지 개최되고 있기 때문에 날짜를 맞추어 가면 다양한 문화체험을 즐길 수 있는 시간까지 가질 수 있다.</p>
+              <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap incheon-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_incheon.jpg" alt="모래내시장">
+            </a>
+            <h3>모래내시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>인천 남동구 호구포로 818</li>
+              <li><i class="fa-solid fa-clock"></i>오전 9:00~오후 6:00</li>
+              <li><i class="fa-solid fa-phone"></i><a href="tel:032-471-1427">032-471-1427</a></li>
+            </ul>
+            <p>구경하는 재미, 고르는 재미, 먹는 재미까지!<br>상인들의 친절한 서비스 교육, 의식 개혁 교육 등을 실시하여 시장을 이용하는 사람들에게 질 높은 서비를 제공하기 위해 지속적으로 노력하고 있는 볼거리 많은 시장입니다.</p>
+            <a href="#" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap kangwon-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_kangwon.jpg" alt="양양전통시장">
+            </a>
+            <h3>양양전통시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>양양읍 남문5길 9</li>
+              <li><i class="fa-solid fa-clock"></i>오전 6:00~오후 7:00</li>
+              <li><i class="fa-solid fa-phone"></i><a href="tel:033-671-2878">033-671-2878</a></li>
+            </ul>
+            <p>양양전통시장은 상설시장으로 양양상권의 중심이며, 매월 4일과 9일에는 전통 5일장이 양양시장을 중심으로 주변에 들어서서 시골장의 훈훈한 인심과 정취를 느낄 수 있는 시장이다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap daegu-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_daegu.jpg" alt="서문시장">
+            </a>
+            <h3>서문시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>대구광역시 중구 달성로 50</li>
+              <li><i class="fa-solid fa-clock"></i>오전 6:00~오후 7:00</li>
+              <li><i class="fa-solid fa-phone"></i><a href="tel:053-256-6341">053-256-6341</a></li>
+            </ul>
+            <p>국내 3대 명품시장이며 경상권 최대 시장으로써 다양한 먹거리와 상품들이 많기로 유명한 전통시장이다. 특히 2016년 6월에는 국내 최대규모의 ‘서문 야시장’이 개장되면서 한국의 전통과 맛을 선사할 수 있는 관광지로 부상하게 되었다.</p>
+              <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap kwangju-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_gwangju.jpg" alt="양동시장">
+            </a>
+            <h3>양동시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>광주 서구 천변좌로 238</li>
+              <li><i class="fa-solid fa-clock"></i>오전 6:00~오후 7:00</li>
+              <li><i class="fa-solid fa-phone"><a href="tel:062-366-0884"></i>062-366-0884</a></li>
+            </ul>
+            <p>백 년 전통이 보증하는 믿음과 신뢰<br>광주시 서구 양동에 위치하고 있는 양동시장은 전라남도에서 가장 큰 규모를 가지고 있다. 백년이 넘는 오랜 전통을 가지고 있는 시장으로 믿고 이용할 수 있는 전통시장으로 유명하다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap busan-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_busan.jpeg" alt="국제시장">
+            </a>
+            <h3>국제시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>부산광역시 중구 국제시장2길 25</li>
+              <li><i class="fa-solid fa-clock"></i>오전 9:00~오후 7:00</li>
+              <li><i class="fa-solid fa-phone"></i><a href="tel:051-245-7389">051-245-73891</a></li>
+            </ul>
+            <p>부산 중구, 부산의 중심지에 위치한 국제시장은 부산의 대표적인 전통시장이다. 2015년에 글로벌 명품 시장 육성 사업으로 선정되어 국내외 관광객들이 다채롭게 즐길 수 있는 복합 문화 공간이 바로 부산 국제시장이다.</p>
+              <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap jeju-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_jeju.jpg" alt="제주동문시장">
+            </a>
+            <h3>제주동문시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>제주특별자치도 제주시 관덕로14길 20</li>
+              <li><i class="fa-solid fa-clock"></i>	오전 8:00~오후 11:00</li>
+              <li><i class="fa-solid fa-phone"><a href="tel:064-752-3001"></i>064-752-3001</a></li>
+            </ul>
+            <p>동문 재래시장은 제주도 도심에 자리하였으며, 가장 크고 역사가 깊은 상설 재래시장이다. 엄청난 규모를 자랑하는 만큼 현지인과 여행객들의 발걸음이 끊이지 않는 곳이다. 밤에는 먹거리가 가득한 야시장의 묘미를 즐길 수 있다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap chungbuk-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_chunbuk.jpg" alt="단양구경시장">
+            </a>
+            <h3>단양구경시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>충청북도 단양군 단양읍 도전리</li>
+              <li><i class="fa-solid fa-clock"></i>	오전 8:00~오후 8:00</li>
+              <li><i class="fa-solid fa-phone"><a href="tel:062-366-0884"></i>062-366-0884</a></li>
+            </ul>
+            <p>단양 8경을 찾아 사계절 내내 많은 관광객이 찾는 곳이다. 품질 좋은 단양의 특산품 마늘과 함께 산지 직송으로 신선한 농수산물을 주로 취급하고 있다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap chungnam-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_chunnam.png" alt="서산동부전통시장">
+            </a>
+            <h3>서산동부전통시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>충청남도 서산시 시장3길 7-2</li>
+              <li><i class="fa-solid fa-clock"></i>	오전 8:00~오후 6:00</li>
+              <li><i class="fa-solid fa-phone"><a href="tel:041-665-5478"></i>041-665-5478</a></li>
+            </ul>
+            <p>3년 연속 최우수시장으로 선정된 서산동부전통시장.충청남도 서북부 권역에서는 최대 규모에 해당하는 시장이다. 해안과 인접한 지리적 특성으로 바다에서 생산되는 수산물 거래가 활발하다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap jeonbuk-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search-jeonbuk.jpg" alt="익산북부시장">
+            </a>
+            <h3>익산북부시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>전라북도 익산시 남중동 인북로 259</li>
+              <li><i class="fa-solid fa-clock"></i>	오전 8:00~오후 8:00</li>
+              <li><i class="fa-solid fa-phone"><a href="tel:063-855-6891"></i>063-855-6891</a></li>
+            </ul>
+            <p>전라북도 내에서 가장 큰 규모의 전통시장으로 유명하다. 2016년 문화관광형시장으로 선정되면서 찾는 사람이 더욱 늘었다. 다양한 품목들을 판매하여 제대로 된 전통시장을 구경하고 싶다면 익산 북부시장이 제격이다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap jeonnam-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search_jeonnam.jpg" alt="곡성기차마을전통시장">
+            </a>
+            <h3>곡성기차마을전통시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>전라남도 곡성군 곡성읍 읍내리 208</li>
+              <li><i class="fa-solid fa-clock"></i>오전 9:00~오후 7:30</li>
+              <li><i class="fa-solid fa-phone"><a href="tel:061-363-8545"></i>061-363-8545</a></li>
+            </ul>
+            <p>새롭게 거듭난 곡성기차마을전통시장은 한옥과 돔형태로 멋스럽게 변신했다. 농수산물을 비롯해 다양한 식재료들이 많이 있어서 시장 구경하는 재미가 쏠쏠하다. 곡성 기차마을과 인접해 있어 기차마을 구경도 함께 할 수 있다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap kyungbuk-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search-kyungbuk.png" alt="고령대가야시장">
+            </a>
+            <h3>고령대가야시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>경상북도 고령군 시장3길 29</li>
+              <li><i class="fa-solid fa-clock"></i>오전 9:00~오후 6:00</li>
+              <li><i class="fa-solid fa-phone"><a href="tel:054-954-5445"></i>054-954-5445</a></li>
+            </ul>
+            <p>값싸고 질 좋은 건어물과 과일, 대장간에서 직접 제작한 농기구 등이 많이 있으며 시골장에서만 맛볼 수 있는 장터국밥, 소구레 등 구수한 맛과 옛 정취를 고스란히 느낄 수 있다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="l-wrap kyungnam-c">
+            <a href="#" title="시장페이지 바로가기">
+              <img src="./images/search-kyungnam.jpg" alt="상남시장">
+            </a>
+            <h3>상남시장</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot"></i>경상남도 창원시 성산구 상남동 16</li>
+              <li><i class="fa-solid fa-clock"></i>오전 9:00~오후 9:00</li>
+              <li><i class="fa-solid fa-phone"><a href="tel:0055-262-1494"></i>055-262-1494</a></li>
+            </ul>
+            <p>전통 재래시장의 모습 그대로를 간직하며 볼거리, 살거리도 많고 먹거리도 많다. 칼국수와 닭갈비, 곱창전골 등 창원시내에서 유명한 맛집도 많이 모여있는 곳으로 유명하다.먹는 것뿐만 아니라 시장을 구경하는 것도 상남시장만의 쏠쏠한 재미다.</p>
+            <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- m_search -->
+        <article class="m_search">
+          <h3 class="hidden">시장찾기</h3>
+          <form name="시장찾기" action="URL" method="post">
+            <fieldset>
+              <legend class="hidden">시장찾기</legend>
+              <p>
+                <label for="market_txt">검색어 입력</label>
+                <input type="search" maxlength="8" placeholder="시장 이름을 입력하세요." id="market_txt">
+              </p>
+              <p>
+                <label for="market_area"><span>상세주소 입력</span></label>
+                <input type="search" maxlength="8" placeholder="지역명을 입력하세요." id="market_area">
+                <label for="market_add"></label>
+                <input type="search" maxlength="8" placeholder="상세주소를 입력하세요." id="market_add">
+              </p>
+              <p class="small_txt">*운영중인 전통시장을 검색하실 수 있습니다.</p>
+              <p>
+                <input type="button" value="검색" id="login_btn">
+              </p>
+            </fieldset>
+          </form>
+        </article>
+      </article><!--//find_wrap-->
+    </section>
+
+    <!-- 3. Recommendation Guide -->
+    <section class="guide">
+      <div class="guide_caption">
+        <h2>시장하시죠,<strong>추천 가이드</strong></h2>
+        <p>시장하시죠가 추천한 코스로 즐겨볼까요?</p>
+      </div>
+      <div class="guide_wrap">
+        <nav class="recom_btn">
+          <ul class="df">
+            <li class="guide_item li01">북신전통시장
+              <p class="pstyle p01">경남 통영시 북신시장1길 (북신전통시장)</p>
+            </li>
+            <li class="guide_item li02 on">서피랑 마을
+              <p class="pstyle p02">경상남도 통영시 정량동 남망공원길 29</p>
+            </li>
+            <li class="guide_item li03">남망산 조각공원
+              <p class="pstyle p03">경상남도 통영시 동호동 동피랑1길 6-18</p>
+            </li>
+            <li class="guide_item li04" title="
+            ">세병관
+            <p class="pstyle p04">경상남도 통영시 세병로 27 (문화동)</p>
+            </li>
+          </ul>
+        </nav>
+        <div class="location">
+          <span></span>
+          <img src="./icons/Polygon.png" alt="" class="polygon">
+          <img src="./images/bicycle.gif" alt="" class="bicycle">
+        </div>
+        <ul class="recom_count df">
+          <li>
+            <a href="#">
+              <img src="./images/recommend01.jpg" alt="" class="guide_item img01">
+              <h3 class="guide_item g_h301">즐길거리, 먹거리 모두 풍성한</h3>
+              <p>통영의 관문에 위치한 통영의 관문시장으로 불리는 통영북신전통시장입니다. 통영북신전통시장은 세병관 뒤쪽 여황산 정상에 우뚝 솟은 북포루의 기상을 안고 약 40여 년 전부터 띄엄띄엄 생겨났으며, 주택가와 혼재하여 주민과 공존하며 삶을 영위하는 인생 시장입니다</p>
+            </a>
+          </li>
+          <li class="small_box">
+            <p>
+              <span class="material-symbols-outlined">
+              directions_bus
+              </span>17분
+            </p>
+            <p class="good">
+              <span class="material-symbols-outlined">
+              directions_bike
+              </span>7분
+            </p>
+            <p>
+              <span class="material-symbols-outlined">
+              directions_walk
+              </span>33분
+            </p>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/recommend02.jpg" alt="" class="guide_item img02 on2">
+              <h3 class="guide_item g_h302 act2">알록달록 색을 입다</h3>
+              <p>서피랑은 통영시내 서쪽에 있는 높은 벼랑이다. 서피랑이야기길을 걷다보면 인사거리(보이소! 반갑습니데이~),
+                음악소리 및 금연거리 깃발 등을 만날 수 있다.</p>
+            </a>
+          </li>
+          <li class="small_box">
+            <p><span class="material-symbols-outlined">
+              directions_bus
+              </span>21분</p>
+            <p class="good"><span class="material-symbols-outlined">
+              directions_bike
+              </span>7분</p>
+            <p><span class="material-symbols-outlined">
+              directions_walk
+              </span>33분</p>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/recommend03.jpg" alt="" class="guide_item img03">
+              <h3 class="guide_item g_h303">한려수도의 절경을 바라보다</h3>
+              <p>충무공원이라고도 불리며, 벚나무와 소나무가 우거진 높이 80m의 남망산을 중심으로 전개된 공원이다. 남동쪽으로 거북등대와 한산도,해갑도,죽도 등의 한려수도의 절경을 바라볼 수 있다. 또한 산꼭대기에는 1953년 6월에 세워진 이충무공의 동상이 서 있다.</p>
+            </a>
+          </li>
+          <li class="small_box">
+            <p><span class="material-symbols-outlined">
+              directions_bus
+              </span>-</p>
+            <p class="good"><span class="material-symbols-outlined">
+              directions_bike
+              </span>5분</p>
+            <p><span class="material-symbols-outlined">
+              directions_walk
+              </span>19분</p>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/recommend04.jpg" alt="" class="guide_item img04">
+              <h3 class="guide_item g_h304">현존하는 가장 큰 목조 건축물</h3>
+              <p>통영 세병관은 이경준제6대 통제사가 선조 37년(1604년)에 건립한 통제영의 객사이다. 그 후 인조 24년(1646) 김응해 제35대 통제사가 규모를 크게 다시 지으면서 입구에 지과문 을 세웠고 고종9년(1872) 채동건 제193대 통제사가 중수하였다.</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. Store -->
+    <section class="store">
+      <div class="store_wrap">
+        <h2><span>동네상점</span></h2>
+        <div class="store_icon">
+          <ul class="df">
+            <li class="store01"><a href="javascript:;">수산,해산,건어물</a></li>
+            <li class="store02"><a href="javascript:;">정육</a></li>
+            <li class="store03"><a href="javascript:;">청과,채소</a></li>
+            <li class="store04"><a href="javascript:;">국,반찬</a></li>
+            <li class="store05"><a href="javascript:;">빵,간식</a></li>
+            <li class="store06"><a href="javascript:;">음료</a></li>
+          </ul>
+        </div>
+
+        <div class="store_txt">
+          <h3>사랑하는 사람에게<br>
+            <span>제철 과일</span>을 선물하세요!
+          </h3>
+          <a href="#" title="자세히보기"><img src="./icons/button.png" alt=""></a>
+        </div>
+
+        <div class="slide_wrapper4">
+          <div class="slide_box">
+            <ul class="slide4 s01 df">
+              <li>
+                <a href="#">
+                  <img src="./images/sea01.jpg" alt="">
+                  <h3>오가네 건어물</h3>
+                  <p>산지 직송으로<br> 
+                    더 맛있는 건어물</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/sea02.jpg" alt="">
+                  <h3>북진 수산</h3>
+                  <p>전국 택배 가능합니다.<br>
+                  어디든 당일 배송!</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/sea03.jpg" alt="">
+                  <h3>소매 물도 회</h3>
+                  <p>정직하게 팝니다. <br>
+                    물치기, 바가지 요금!</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/sea04.jpg" alt="">
+                  <h3>원은 수산</h3>
+                  <p>메기찜, 가자미찜<br>
+                  밀키드도 있어요~</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="slide4 s02 df">
+              <li>
+                <a href="#">
+                  <img src="./images/meat01.png" alt="">
+                  <h3>대화정육전문매장</h3>
+                  <p>큐알코드를 제공합니다.<br> 
+                    당일 도축한 소를 확인하세요.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/meat02.png" alt="">
+                  <h3>착한 고깃간</h3>
+                  <p>대량으로 구매 가능<br>
+                  싸고 맛있는 집 입니다.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/meat03.png" alt="">
+                  <h3>동남 정육점</h3>
+                  <p>단골들이 말해주는<br>
+                    고기의 질!</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/meat04.png" alt="">
+                  <h3>동원 한우</h3>
+                  <p>육회, 뭉티기 전문<br>
+                  신선하지 않으면 팔지 않습니다.</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="slide4 s03 df">
+              <li>
+                <a href="#">
+                  <img src="./images/markat01.jpg" alt="">
+                  <h3>빛돌 과일</h3>
+                  <p>정직한 가격, 정직한 맛으로<br> 
+                    보장합니다!</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/markat02.jpg" alt="">
+                  <h3>진주 상회</h3>
+                  <p>3대째 이어져 내려온<br>
+                  신뢰의 맛입니다.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/markat03.jpg" alt="">
+                  <h3>부산 부식</h3>
+                  <p>한자리에서 30년 <br>
+                    걸어온 길은 배신하지 않습니다.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/markat04.jpg" alt="">
+                  <h3>과일나라</h3>
+                  <p>신선한 과일과 채소를<br>
+                  매일 새벽 들여옵니다.</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="slide4 s04 df">
+              <li>
+                <a href="#">
+                  <img src="./images/side01.jpg" alt="">
+                  <h3>맛나 반찬</h3>
+                  <p>매일 아침 새로 합니다.<br> 
+                    반찬 사러 오세요~</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/side02.jpg" alt="">
+                  <h3>시민 본 두부어묵</h3>
+                  <p>국산 콩으로 만든<br>
+                  포슬포슬 맛있는 두부집</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/side03.jpg" alt="">
+                  <h3>북신 반찬</h3>
+                  <p>50가지가 넘는 반찬<br>
+                    오늘 저녁 반찬 어때요?</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/side04.jpg" alt="">
+                  <h3>북신 지짐</h3>
+                  <p>부침개랑 막걸리 한잔<br>
+                  둘이 먹다 셋이 죽어도 모르는 그 맛</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="slide4 s05 df">
+              <li>
+                <a href="#">
+                  <img src="./images/bread01.jpg" alt="">
+                  <h3>못난이 꽈배기</h3>
+                  <p>우리나라 전통 간식<br> 
+                    설탕 버무린 꽈베기 맛집</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/bread02.jpg" alt="">
+                  <h3>서울 떡집</h3>
+                  <p>돌잔치, 결혼식, 행사<br>
+                  떡 합니다. 언제든 연락주세요.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/bread03.jpg" alt="">
+                  <h3>송가네 옛날과자</h3>
+                  <p>인간사료<br>
+                    먹다보면 사라지는 마술</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/bread04.jpg" alt="">
+                  <h3>소문난 떡집</h3>
+                  <p>정성으로 빚은 수제떡<br>
+                  호랑이도 울고갈 맛</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="slide4 s06 df">
+              <li>
+                <a href="#">
+                  <img src="./images/beverage01.jpg" alt="">
+                  <h3>대교 건강원</h3>
+                  <p>포도즙, 잉어즙, 양파즙<br> 
+                    건강즙은 대교 건강원에서</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/beverage02.jpg" alt="">
+                  <h3>서울 족발</h3>
+                  <p>돼지 앞다리살로<br>
+                  야들야들하게 삶았어요!</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/beverage03.jpg" alt="">
+                  <h3>북신 탕제원</h3>
+                  <p>6년근 홍삼 전문<br>
+                    100세 시대 건강 책임집니다.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./images/beverage04.jpg" alt="">
+                  <h3>희연 회 식당.</h3>
+                  <p>희자매의 손맛<br>
+                  전국에서 느껴보세요.</p>
+                </a>
+              </li>
+            </ul>
+          </div> <!--//slide_box-->
+        </div> <!--//slide_wrapper4-->
+        <i class="fas fa-angle-left" id="store_l_btn"></i>
+        <i class="fas fa-angle-right" id="store_r_btn"></i>
+      </div><!--//store_wrap-->
+    </section>
+
+
+    <!-- 5. event -->
+    <section class="event">
+      <h2 class="hidden">이벤트</h2>
+      <article class="event_banner">
+        <h3 class="hidden">이벤트베너</h3>
+        <ul class="silde_wrap5">
+          <li>
+            <a href="./images/event01.jpg">
+              <img src="./images/event01.jpg" alt="이벤트1" class="e_img">
+              <div class="event_txt e_txt_on">
+                <p><span>카트</span>도 있고 <span>배달</span>도 되는<br>
+                  편리한 전통시장<br>
+                  <strong>망우동 우림시장</strong></p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./images/event02.jpg">
+              <img src="./images/event02.jpg" alt="이벤트2" class="e_img">
+              <div class="event_txt">
+                <p><span>음악</span>이 함께하는<br>
+                  즐거운 전통시장<br>
+                  <strong>부평 캠프마캣</strong></p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="./images/event03.jpg">
+              <img src="./images/event03.jpg" alt="이벤트3" class="e_img">
+              <div class="event_txt">
+                <p><span>아</span>껴쓰고 <span>나</span>눠쓰고<br>
+                <span>바</span>꿔쓰고 <span>다</span>시쓰는<br>
+                <strong>화곡동 벼룩시장</strong></p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="e_btn df">
+          <li><i class="fas fa-angle-left e_left"></i></li>
+          <li class="pagination5"></li>
+          <li><i class="fas fa-angle-right e_right"></i></li>
+        </ul>
+      </article>
+
+      <article class="news">
+        <h3>NEWS</h3>
+        <div class="famous">
+            <span>오늘의 추천기사</span>
+            <a href="#"><span>KBS 뉴스 |</span> 괴산전통시장, ‘우리동네 단골시장’ 지원사업 선정...</a>
+        </div>
+        <ul>
+          <li><a href="#"><span>머니 투데이 | </span>광명시, 180억 투입 광명전통시장 제2공영주차장 조성...</a></li>
+          <li><a href="#"><span>굿모닝 투데이 | </span> "장 서지 않는 날, 전통시장 공동 활용하자"...</a></li>
+          <li><a href="#"><span>한국 시민 기자 협회 | </span>강릉시, 다시찾고 싶은 전통시장 육성위해 현장소통나서...</a></li>
+          <li><a href="#"><span>에너지 경제 신문 | </span> 원주시, "전통시장 화재 골든타임을 확보하라"...</a></li>
+        </ul>
+        <i class="fa-solid fa-plus"></i>
+      </article>
+    </section>
+
+    <!-- 6. instagram -->
+    <section class="instagram">
+      <div class="insta_wrap">
+        <div class="insta_txt">
+          <i class="fa-brands fa-instagram"></i>
+          <h2>instagram</h2>
+        </div>
+        <article class="insta_con">
+          <ul>
+            <li><a href="#" title="">
+              <div class="insta_img">
+                <img src="./images/instagram01.jpg" alt="">
+              </div>
+              <p>#광장시장 #제주위트바<br>#에일맥주</p>
+            </a></li>
+            <li><a href="#" title="">
+              <div class="insta_img">
+                <img src="./images/instagram02.jpg" alt="">
+              </div>
+              <p>#경동시장 #스타벅스<br>#경동1960</p>
+            </a></li>
+            <li><a href="#" title="">
+              <div class="insta_img">
+                <img src="./images/instagram03.jpg" alt="">
+              </div>
+              <p>#예산시장 #곱창 #먹스타그램 <br>#백종원</p>
+            </a></li>
+            <li><a href="#" title="">
+              <div class="insta_img">
+                <img src="./images/instagram04.jpg" alt="">
+              </div>
+              <p>#전주 남부시장 #청년몰<br>#목요카레</p>
+            </a></li>
+            <li><a href="#" title="">
+              <div class="insta_img">
+                <img src="./images/instagram05.jpg" alt="">
+              </div>
+              <p>#강릉 중앙시장 #장칼국수<br>#옹심이</p>
+            </a></li>
+            <li><a href="#" title="">
+              <div class="insta_img">
+                <img src="./images/instagram06.jpg" alt="">
+              </div>
+              <p>#깡통시장 #부산 #떡볶이<br>#지짐이</p>
+            </a></li>
+            <li><a href="#" title="">
+              <div class="insta_img">
+                <img src="./images/instagram07.jpg" alt="">
+              </div>
+              <p>#대특시 #중앙시장<br>#대게 장 볶음밥 #박달대게</p>
+            </a></li>
+            <li><a href="#" title="">
+              <div class="insta_img">
+                <img src="./images/instagram08.jpg" alt="">
+              </div>
+              <p>#망원시장 #수제핫바<br>#무궁화 어묵</p>
+            </a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- aside -->
+    <aside>
+      <a href="#" title="위로 바로가기" id="top_btn">Top</a>
+    </aside>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="f_top df">
+      <nav>
+        <ul class="df">
+          <li><a href="#"><span>개인정보 처리방침</span></a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">찾아오시는 길</a></li>
+          <li><a href="#">공지사항</a></li>
+        </ul>
+      </nav>
+
+      <ul class="sns df">
+        <li><a href="#"><i class="sprite f-face"></i></a></li>
+        <li><a href="#"><i class="sprite f-youtube"></i></a></li>
+        <li><a href="#"><i class="sprite f-insta"></i></a></li>
+        <li><a href="#"><i class="sprite f-blog"></i></a></li>
+      </ul>
+    </div>
+    <div class="f_bottom df">
+      <h2><a href="#"><img src="./icons/f_logo.png" alt="logo"></a></h2>
+      <address>
+        <p>03192 서울특별시 종로구 수표로 96 국일관드림팰리스 6층(관수동 20)</p>
+        <p>사업자등록번호  124-81-12345 메일주소 areyouhungry@gmail.com</p>
+        <p>상호 및 대표자 (주)시장하시죠</p>
+      </address>
+      <div class="family_btn">
+        <button id="f-btn">Family Site<span class="material-symbols-outlined">
+          arrow_drop_down
+          </span></button>
+        <ul class="family">
+          <li><a href="#">다모아상점</a></li>
+          <li><a href="#">시장투어리스트</a></li>
+        </ul>
+      </div>
+
+    </div> <!--//.f_bottom-->
+    <div class="number df">
+      <dl>
+        <dt>고객센터</dt>
+        <dd class="tell">02-123-4567</dd>
+        <dd class="time">(월~금 9:00~18:00)</dd>
+      </dl>
+      <dl>
+        <dt>입점문의</dt>
+        <dd class="tell">02-987-6543</dd>
+        <dd class="time">(월~금 9:00~18:00)</dd>
+      </dl>
+    </div>
+    <p class="copy">Copyright &copy; 2023 AREYOUHUNGRY All rights reserved.</p>
+  </footer>
+  <!-- 메인 스크립트 연결 -->
+  <script src="./script/main.js"></script>
+</body>
+</html>
