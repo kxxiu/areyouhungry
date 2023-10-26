@@ -1,10 +1,9 @@
 @charset "utf-8";
 
-/* HEADER */
+/****** HEADER ******/
 body > header{
-  position: fixed;
+  position: fixed;z-index: 100;
   top: 0;right: 0;
-  z-index: 100;
   width: 100%;height: 60px;
   background-color: #fff;
   align-items: center;
@@ -18,7 +17,6 @@ header > h1 img{height: 55px;}
 .lnb li{
   margin-right: 10px;
   font-size: 1.4rem;
-  cursor: pointer;
 }
 .lnb li a{
   padding: 6px 10px;
@@ -26,16 +24,17 @@ header > h1 img{height: 55px;}
 .lnb li i{
   color: var(--main-color);
 }
+
+/* 햄버거 버튼 */
 i.fa-bars{
   position: absolute;
   top: 8px;left: 10px;
   padding: 9px 11px;
   color: var(--main-color);
   font-size: 1.6rem;
-  cursor: pointer;
 }
 
-/* NAVIGATION */
+/* 내비게이션 */
 .nav{
   position: fixed;
   top: 0;right: 100%;
@@ -45,14 +44,17 @@ i.fa-bars{
   box-sizing: border-box;
   transition: 0.4s;
 }
+
+/* 닫기버튼 */
 i.close{
   position: absolute;
-  top: 8px;right: 10px;
+  top: 8px;right: 2%;
   padding: 5px;
   color: #fff;
   font-size: 2.2rem;
   cursor: pointer;
 }
+
 .gnb-bg{
   height: 100%;
   background: #faf0e4;
@@ -63,10 +65,14 @@ i.close{
   text-align: center;
   border-bottom: 8px solid #D4E8E6;
 }
+
+/* 상단로고 */
 .gnb-bg > div h2{
   padding: 10px 0 18px 0;
 }
 .gnb-bg > div h2 img{width: 75px;}
+
+/* 다국어 버튼 */
 .gnb-bg .lang{
   justify-content: center;
   padding-bottom: 15px;
@@ -81,6 +87,7 @@ i.close{
   width: 1px;height: 12px;
   background: var(--main-color);
 }
+
 .gnb{
   position: relative;
   padding-top: 10px;
@@ -100,7 +107,6 @@ i.close{
   right: 10px;
   font-size: 1.8rem;
   line-height: 45px;
-  /* transform: rotate(0deg); */
 }
 .gnb .sub{
   display: none;
@@ -111,7 +117,7 @@ i.close{
   border-bottom: 1px solid #D4E8E6;
 }
 
-/* SPRITE - NAV*/
+/* SPRITE - NAV */
 .sp-search{
   width: 33px;height: 32px;
   transform: translate(-10px, 8px);
@@ -140,15 +146,17 @@ i.close{
   margin-right: 8px;
 }
 
+/* SNS 버튼 */
 .sns{
   position: absolute;
-  right: 15px;bottom: 8px;
+  right: 3%;bottom: 8px;
 }
 .sns li a{
   display: block;
   margin-bottom: 8px;
   padding: 5px;
 }
+
 /* SPRITE - SNS */
 .sns li i{
   width: 30px;height: 30px;
@@ -167,7 +175,7 @@ i.close{
   background-position: -340px -35px;
 }
 
-/* SEARCH PAGE */
+/* 검색창 */
 .search-page{
   position: fixed;
   left: 0;bottom: 100%;
@@ -176,6 +184,7 @@ i.close{
   background: rgba(0,0,0,0.9);
   text-align: center;
 }
+
 /* 뒤로가기 버튼 */
 .search-page i.material-icons{
   color: #eee;
@@ -183,7 +192,8 @@ i.close{
   position: absolute;
   top: 23px;left: 20px;
 }
-/* 검색창 */
+
+/* 검색바 */
 #s-bar{
   position: relative;
   top: 14px;left: 5%;
@@ -206,6 +216,7 @@ input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration{display:none;}
 ::placeholder{color: #eee;}
+
 /* 돋보기 아이콘 */
 .search-page p > i.fa-solid{
   position: absolute;
@@ -213,6 +224,7 @@ input::-webkit-search-results-decoration{display:none;}
   color: #eee;
   font-size: 1.2rem;
 }
+
 /* 최근검색어 */
 .search-page h3{
   color: #d2d2d2;
@@ -256,7 +268,7 @@ input::-webkit-search-results-decoration{display:none;}
 }
 .s-recommend li a{color: #9BE7DF;}
 
-/* FOOTER */
+/***** FOOTER *****/
 footer {
   width: 100%;
   padding: 20px 0;
@@ -282,9 +294,10 @@ footer a{color: var(--footer-color)}
 .f-nav li:first-child:before{display: none;}
 .f-nav li span{
   color: #9BE7DF;
-  font-weight: bold;
+  font-weight: 500;
 }
 
+/* 패밀리 사이트 */
 button{
   position: relative;
   width: 200px;
@@ -299,7 +312,7 @@ button{
 }
 button i.material-icons{
   position: absolute;
-  top: 5px;left: 68%;
+  top: 5px;right: 10px;
 }
 .family{
   display: none;
@@ -313,6 +326,8 @@ button i.material-icons{
   line-height: 33px;
   margin-bottom: 3px;
 }
+
+/* SNS */
 .f-sns{
   justify-content: center;
   gap: 5px;
@@ -322,7 +337,6 @@ button i.material-icons{
   display: block;
   padding: 5px;
 }
-
 
 /* SPRITE - SNS */
 .f-sns i.sprite{width: 30px;height: 30px;}
@@ -339,10 +353,15 @@ i.f-blog{background-position: -340px 0;}
 }
 .inq dl{
   margin: 0px 10px;
-  line-height: 20px;
+  line-height: 18px;
 }
-.inq dt{font-size: 1rem;}
-.inq dd{font-size: 0.9rem;}
+.inq dt{
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 22px;
+}
+.inq dd{font-size: 1rem;}
+.inq dd:last-child{font-size: 0.687rem;}
 .inq .tel{
   font-size: 1.2rem;
   font-weight: bold;
