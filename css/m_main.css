@@ -572,10 +572,12 @@ i.kyungnam{background-position: -564px -71px;}
   margin-top: 40px;
 }
 #community .swiper-pagination-bullet {
+  margin: 3px;
   width: 12px; height: 12px;
   border-radius: 50%;
   background: rgba(89, 89, 89, 0.5);
 }
+
 #community .swiper-pagination-bullet-active {
   background-color: #61AD96;
 }
