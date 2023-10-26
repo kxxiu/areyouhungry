@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>시장하시죠</title>
+
+  <!-- 기본서식 -->
+  <link rel="stylesheet" href="./css/m_base.css">
+  <!-- 헤더,푸터 서식 -->
+  <link rel="stylesheet" href="./css/m_layout.css">
+  <!-- 메인서식 -->
+  <link rel="stylesheet" href="./css/m_main.css">
+  <!-- 스와이퍼 슬라이드 -->
+  <link rel="stylesheet" href="./css/m_swiper.css"/>
 
   <!-- 아이콘CDN-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,27 +22,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-  <!-- 슬라이드 -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-  <!-- 슬라이드 -->
-  <link rel="stylesheet" href="./css/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.css"/>
-
-  <!-- 기본서식 -->
-  <link rel="stylesheet" href="./css/m_base.css">
-
-  <!-- 헤더,푸터 서식 -->
-  <link rel="stylesheet" href="./css/m_layout.css">
-
-  <!-- 메인서식 -->
-  <link rel="stylesheet" href="./css/m_main.css">
-
   <!-- 제이쿼리 -->
   <script defer src="./script/m_main.js"></script>
+  <!-- 스와이퍼 슬라이드 -->
+  <script src="./script/swiper.js"></script>
 
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="./m_images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
+  <!-- HEADER -->
   <header class="d-flex">
     <h1>
       <a href="m_index.html" title="메인페이지 바로가기">
@@ -49,6 +47,7 @@
       </ul>
     </nav>
 
+    <!-- 검색창 -->
     <section class="search-page">
       <h2 class="hidden">검색창</h2>
       <form name="#" action="#" method="get">
@@ -79,8 +78,9 @@
       </form>
     </section>
 
+    <!-- 햄버거 버튼-->
     <i class="fas fa-bars"></i>
-
+    <!-- 내비게이션 -->
     <nav class="nav">
       <i class="material-icons close">close</i>
       <div class="gnb-bg">
@@ -88,13 +88,13 @@
           <h2>
             <a href="#"><img src="./m_images/logo.png" alt="메인로고"></a>
           </h2>
-          
+          <!-- 다국어 버튼 -->
           <ul class="lang d-flex">
             <li><a href="#" title="한국어">한국어</a></li>
             <li><a href="#" title="English">English</a></li>
           </ul>
         </div>
-
+        
         <ul class="gnb">
           <li><a href="m_search.html" title="시장찾기">
             <i class="sprite sp-search"></i>
@@ -155,8 +155,9 @@
     </nav>
   </header>  
   
+  <!-- MAIN -->
   <main>
-    <!-- MAIN SLIDE -->
+    <!-- 메인 슬라이드 -->
     <article id="slide">
       <h2 class="hidden">메인슬라이드</h2>
       <div class="slide-wrap d-flex">
@@ -168,7 +169,7 @@
         </div>
         <div class="slide-content">
           <a href="event.html" title="이벤트 바로가기">
-            <h3><span>시장하시죠</span>만의 <span>이벤트!</span><br>신규회원에게<br>온누리 상품권이 펑펑!</h3>
+            <h3><span>시장하시죠</span>만의 <span>이벤트!</span><br>신규회원에게<br>온누리 상품권이 팡팡!</h3>
             <img src="./m_images/banner02.png" alt="배너이미지2">
           </a>
         </div>
@@ -183,13 +184,13 @@
             <img src="./m_images/banner04.png" alt="배너이미지4"></a>
         </div>
       </div>
-      
+      <!-- 슬라이드 기능 버튼 -->
       <div class="slide-btn d-flex">
         <ul class="s-lbtn d-flex">
           <li class="progressbar-wrap">
             <div class="progressbar"></div>
           </li>
-          <li>&nbsp;</li>
+          <li>&nbsp;</li>  <!-- 페이지 넘버 -->
           <li><i class="material-icons pause">pause</i></li>
         </ul>
         <ul class="s-rbtn d-flex">
@@ -199,70 +200,66 @@
       </div>
     </article>
 
-    <!-- LOCATION -->
+    <!-- 시장정보 -->
     <article id="location">
       <h2 class="h-font">지역별 시장정보</h2>
       <p>어떤 시장을 찾고 계신가요?<br>지역을 검색하여 가까운 시장을 찾아보세요.</p>
       <section class="l-list">
         <h3 class="hidden">지역리스트</h3>
-        <!-- 슬라이드 -->
+        <!-- 지역 리스트 슬라이드-->
         <div class="swiper mySwiper">
           <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <a href="#" title="서울지역 시장검색">
-                <i class="sprite seoul"></i>
-                <span class="act-c">서울</span>
-              </a>
+            <li class="swiper-slide"><a href="#" title="서울지역 시장검색">
+                <i class="sprite seoul"></i><span class="act-c">서울</span></a>
             </li>
-            <li class="swiper-slide">
-              <a href="#" title="경기지역 시장검색">
-                <i class="sprite gyeonggi"></i>
-                <span>경기</span>
-              </a>
+            <li class="swiper-slide"><a href="#" title="경기지역 시장검색">
+                <i class="sprite gyeonggi"></i><span>경기</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="인천지역 시장검색">
-              <i class="sprite incheon"></i><span>인천</span></a>
+                <i class="sprite incheon"></i><span>인천</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="강원지역 시장검색">
-              <i class="sprite kangwon"></i><span>강원</span></a>
+                <i class="sprite kangwon"></i><span>강원</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="대구지역 시장검색">
-              <i class="sprite daegu"></i><span>대구</span></a>
+                <i class="sprite daegu"></i><span>대구</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="광주지역 시장검색">
-              <i class="sprite kwangju"></i><span>광주</span></a>
+                <i class="sprite kwangju"></i><span>광주</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="부산지역 시장검색">
-              <i class="sprite busan"></i><span>부산</span></a>
+                <i class="sprite busan"></i><span>부산</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="제주지역 시장검색">
-              <i class="sprite jeju"></i><span>제주</span></a>
+                <i class="sprite jeju"></i><span>제주</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="충북지역 시장검색">
-              <i class="sprite chungbuk"></i><span>충북</span></a>
+                <i class="sprite chungbuk"></i><span>충북</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="충남지역 시장검색">
-              <i class="sprite chungnam"></i><span>충남</span></a>
+                <i class="sprite chungnam"></i><span>충남</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="전북지역 시장검색">
-              <i class="sprite jeonbuk"></i><span>전북</span></a>
+                <i class="sprite jeonbuk"></i><span>전북</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="전남지역 시장검색">
-              <i class="sprite jeonnam"></i><span>전남</span></a>
+                <i class="sprite jeonnam"></i><span>전남</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="경북지역 시장검색">
-              <i class="sprite kyungbuk"></i><span>경북</span></a>
+                <i class="sprite kyungbuk"></i><span>경북</span></a>
             </li>
             <li class="swiper-slide"><a href="#" title="경남지역 시장검색">
-              <i class="sprite kyungnam"></i><span>경남</span></a>
+                <i class="sprite kyungnam"></i><span>경남</span></a>
             </li>
           </ul>
         </div>
-        <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </section>
 
+      <!-- 시장정보 -->
       <section class="l-content">
+        <!-- 서울 -->
         <div class="l-wrap seoul-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_seoul.jpg" alt="광장시장">
@@ -276,6 +273,7 @@
             <p>서울 최대 규모의 재래시장, 대한민국 최초의 전통시장! 수많은 할리우드 스타들도 내한하면 찾은 명소로 유명하다. 다양한 먹거리를 즐기고 싶다면 광장시장에 가보시는 건 어떤가요?</p>
             <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 경기 -->
         <div class="l-wrap gyeonggi-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_gyeonggi.jpg" alt="파주금촌통일시장">
@@ -289,6 +287,7 @@
             <p>전통과 현대가 잘 어우러진 금촌통일시장<br>매달 둘째 주 토요일과 일요일에는 '금촌문화난장'이라는 어울림 장터까지 개최되고 있기 때문에 날짜를 맞추어 가면 다양한 문화체험을 즐길 수 있는 시간까지 가질 수 있다.</p>
             <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 인천 -->
         <div class="l-wrap incheon-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_incheon.jpg" alt="모래내시장">
@@ -302,6 +301,7 @@
           <p>구경하는 재미, 고르는 재미, 먹는 재미까지!<br>상인들의 친절한 서비스 교육, 의식 개혁 교육 등을 실시하여 시장을 이용하는 사람들에게 질 높은 서비를 제공하기 위해 지속적으로 노력하고 있는 볼거리 많은 시장입니다.</p>
           <a href="#" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 강원 -->
         <div class="l-wrap kangwon-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_kangwon.jpg" alt="양양전통시장">
@@ -315,6 +315,7 @@
           <p>양양전통시장은 상설시장으로 양양상권의 중심이며, 매월 4일과 9일에는 전통 5일장이 양양시장을 중심으로 주변에 들어서서 시골장의 훈훈한 인심과 정취를 느낄 수 있는 시장이다.</p>
           <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 대구 -->
         <div class="l-wrap daegu-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_daegu.jpg" alt="서문시장">
@@ -328,6 +329,7 @@
           <p>국내 3대 명품시장이며 경상권 최대 시장으로써 다양한 먹거리와 상품들이 많기로 유명한 전통시장이다. 특히 2016년 6월에는 국내 최대규모의 ‘서문 야시장’이 개장되면서 한국의 전통과 맛을 선사할 수 있는 관광지로 부상하게 되었다.</p>
             <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 광주 -->
         <div class="l-wrap kwangju-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_gwangju.jpg" alt="양동시장">
@@ -341,9 +343,10 @@
           <p>백 년 전통이 보증하는 믿음과 신뢰<br>광주시 서구 양동에 위치하고 있는 양동시장은 전라남도에서 가장 큰 규모를 가지고 있다. 백년이 넘는 오랜 전통을 가지고 있는 시장으로 믿고 이용할 수 있는 전통시장으로 유명하다.</p>
           <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 부산 -->
         <div class="l-wrap busan-c">
           <a href="#" title="시장페이지 바로가기">
-            <img src="./m_images/search_busan.jpeg" alt="국제시장">
+            <img src="./m_images/search_busan.jpg" alt="국제시장">
           </a>
           <h3>국제시장</h3>
           <ul>
@@ -354,6 +357,7 @@
           <p>부산 중구, 부산의 중심지에 위치한 국제시장은 부산의 대표적인 전통시장이다. 2015년에 글로벌 명품 시장 육성 사업으로 선정되어 국내외 관광객들이 다채롭게 즐길 수 있는 복합 문화 공간이 바로 부산 국제시장이다.</p>
             <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 제주 -->
         <div class="l-wrap jeju-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_jeju.jpg" alt="제주동문시장">
@@ -367,6 +371,7 @@
           <p>동문 재래시장은 제주도 도심에 자리하였으며, 가장 크고 역사가 깊은 상설 재래시장이다. 엄청난 규모를 자랑하는 만큼 현지인과 여행객들의 발걸음이 끊이지 않는 곳이다. 밤에는 먹거리가 가득한 야시장의 묘미를 즐길 수 있다.</p>
           <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 충북 -->
         <div class="l-wrap chungbuk-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_chunbuk.jpg" alt="단양구경시장">
@@ -380,9 +385,10 @@
           <p>단양 8경을 찾아 사계절 내내 많은 관광객이 찾는 곳이다. 품질 좋은 단양의 특산품 마늘과 함께 산지 직송으로 신선한 농수산물을 주로 취급하고 있다.</p>
           <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 충남 -->
         <div class="l-wrap chungnam-c">
           <a href="#" title="시장페이지 바로가기">
-            <img src="./m_images/search_chunnam.png" alt="서산동부전통시장">
+            <img src="./m_images/search_chunnam.jpg" alt="서산동부전통시장">
           </a>
           <h3>서산동부전통시장</h3>
           <ul>
@@ -393,9 +399,10 @@
           <p>3년 연속 최우수시장으로 선정된 서산동부전통시장.충청남도 서북부 권역에서는 최대 규모에 해당하는 시장이다. 해안과 인접한 지리적 특성으로 바다에서 생산되는 수산물 거래가 활발하다.</p>
           <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 전북 -->
         <div class="l-wrap jeonbuk-c">
           <a href="#" title="시장페이지 바로가기">
-            <img src="./m_images/search-jeonbuk.jpg" alt="익산북부시장">
+            <img src="./m_images/search_jeonbuk.jpg" alt="익산북부시장">
           </a>
           <h3>익산북부시장</h3>
           <ul>
@@ -406,6 +413,7 @@
           <p>전라북도 내에서 가장 큰 규모의 전통시장으로 유명하다. 2016년 문화관광형시장으로 선정되면서 찾는 사람이 더욱 늘었다. 다양한 품목들을 판매하여 제대로 된 전통시장을 구경하고 싶다면 익산 북부시장이 제격이다.</p>
           <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 전남 -->
         <div class="l-wrap jeonnam-c">
           <a href="#" title="시장페이지 바로가기">
             <img src="./m_images/search_jeonnam.jpg" alt="곡성기차마을전통시장">
@@ -419,9 +427,10 @@
           <p>새롭게 거듭난 곡성기차마을전통시장은 한옥과 돔형태로 멋스럽게 변신했다. 농수산물을 비롯해 다양한 식재료들이 많이 있어서 시장 구경하는 재미가 쏠쏠하다. 곡성 기차마을과 인접해 있어 기차마을 구경도 함께 할 수 있다.</p>
           <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 경북 -->
         <div class="l-wrap kyungbuk-c">
           <a href="#" title="시장페이지 바로가기">
-            <img src="./m_images/search-kyungbuk.png" alt="고령대가야시장">
+            <img src="./m_images/search_kyungbuk.jpg" alt="고령대가야시장">
           </a>
           <h3>고령대가야시장</h3>
           <ul>
@@ -432,9 +441,10 @@
           <p>값싸고 질 좋은 건어물과 과일, 대장간에서 직접 제작한 농기구 등이 많이 있으며 시골장에서만 맛볼 수 있는 장터국밥, 소구레 등 구수한 맛과 옛 정취를 고스란히 느낄 수 있다.</p>
           <a href="#" title="자세히보기" class="moreview">자세히보기 <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <!-- 경남 -->
         <div class="l-wrap kyungnam-c">
           <a href="#" title="시장페이지 바로가기">
-            <img src="./m_images/search-kyungnam.jpg" alt="상남시장">
+            <img src="./m_images/search_kyungnam.jpg" alt="상남시장">
           </a>
           <h3>상남시장</h3>
           <ul>
@@ -448,7 +458,7 @@
       </section>
     </article>
 
-    <!-- GUIDE -->
+    <!-- 추천가이드 -->
     <article id="guide">
       <h2 class="h-font">시장하시죠, <span>추천가이드</span></h2>
       <p>시장하시죠가 추천한 코스로 즐겨볼까요?</p>
@@ -461,7 +471,7 @@
             <div class="g-content d-flex">
             <div class="g-desc">
               <a href="#" title="북신전통시장 자세히보기">
-                <img src="./m_images/guide01.png" alt="북신전통시장">
+                <img src="./m_images/guide01.jpg" alt="북신전통시장">
                 <h4>즐길거리, 먹거리 모두 풍성한</h4>
                 <i class="fa-solid fa-arrow-right"></i>
                 <p>약 40여 년 전부터 상점이 생겨나기 시작해 통영 주민들과 함께 공존해 오고 있는 정겨운 시장이다. 통영을 대표하는 다양한 상품들이 많아 관광객들도 많이 찾는다.</p>
@@ -539,7 +549,7 @@
       </div>
     </article>
     
-    <!-- PRODUCT -->
+    <!-- 동네상점 -->
     <section id="product">
       <h2 class="h-font">동네상점</h2>
       <p>각 지역의 시장 인기상품을 집에서 배송으로 받아보세요.</p>
@@ -548,63 +558,69 @@
         <h3><i class="sprite"></i>실시간 인기상품</h3>
         <div class="swiper products">
           <ul class="swiper-wrapper d-flex">
+            <!-- 1 -->
             <li class="swiper-slide">
               <a href="#" title="상품 자세히보기">
                 <img src="./m_images/product01.jpg" alt="티각태각">
                 <div class="p-txt">
                   <h4>티각태각</h4>
                   <span>속초중앙시장</span>
-                  <p>속초 중앙시장에서 시작하여<br>전통 음식 부각의 대표 브랜드로<br>자리매김한 티각태각</p>
+                  <p>속초 중앙시장에서 시작하여 전통 음식 부각의 대표 브랜드로 자리매김한 티각태각</p>
                 </div>
               </a>
             </li>
+            <!-- 2 -->
             <li class="swiper-slide">
               <a href="#" title="상품 자세히보기">
                 <img src="./m_images/product02.jpg" alt="우이락">
                 <div class="p-txt">
                   <h4>우이락</h4>
                   <span>망원시장</span>
-                  <p>바삭아삭쫀득 식감,<br>우이락의 베스트셀러 고추튀김<br>막걸리와 어울리는 최고의 안주</p>
+                  <p>막걸리와 어울리는 최고의 안주, 바삭아삭쫀득 식감 우이락의 베스트셀러 고추튀김 </p>
                 </div>
               </a>
             </li>
+            <!-- 3 -->
             <li class="swiper-slide">
               <a href="#" title="상품 자세히보기">
                 <img src="./m_images/product05.jpg" alt="통영꿀빵">
                 <div class="p-txt">
                   <h4>통영꿀빵</h4>
-                  <span>통영중앙전통시장</span>
-                  <p>현지인이 인정한 통영의 명물<br>통영가면 꼭 먹어야 하는 맛있는 통영꿀빵</p>
+                  <span>통영중앙시장</span>
+                  <p>현지인이 인정한 통영의 명물, 통영가면 꼭 먹어야 하는 맛있는 통영꿀빵</p>
                 </div>
               </a>
             </li>
+            <!-- 4 -->
             <li class="swiper-slide">
               <a href="#" title="상품 자세히보기">
                 <img src="./m_images/product06.jpg" alt="오복떡집">
                 <div class="p-txt">
-                  <h4>김천 복숭아 4kg(1박스)</h4>
+                  <h4>햇복숭아</h4>
                   <span>광명새마을시장</span>
-                  <p>달콤한 맛이 일품인 경북 김천에서 수확한 햇복숭아<br>입안 가득 맴도는 복숭아 과즙을 지금 느껴보세요</p>
+                  <p>입안 가득 맴도는 복숭아 과즙이 일품인 경북 김천에서 수확한 햇복숭아</p>
                 </div>
               </a>
             </li>
+            <!-- 5 -->
             <li class="swiper-slide">
               <a href="#" title="상품 자세히보기">
                 <img src="./m_images/product03.jpg" alt="단빵제빵소">
                 <div class="p-txt">
                   <h4>단빵제빵소</h4>
-                  <span>단양 구경시장</span>
-                  <p>단양 최고의 인기맛집,<br>겉바속촉 4종 마늘빵 세트</p>
+                  <span>단양구경시장</span>
+                  <p>단양 최고의 인기맛집, 겉바속촉 4종 마늘빵 세트 이젠 온라인에서 만나보세요.</p>
                 </div>
               </a>
             </li>
+            <!-- 6 -->
             <li class="swiper-slide">
               <a href="#" title="상품 자세히보기">
                 <img src="./m_images/product04.jpg" alt="오복떡집">
                 <div class="p-txt">
                   <h4>오복떡집</h4>
                   <span>제주동문시장</span>
-                  <p>30년째 같은 자리에서 전통을<br>이어 운영되고 있는 떡집<br>쫀득한 오메기떡</p>
+                  <p>30년째 같은 자리에서 전통을 이어온 쫀득한 오메기떡 맛집</p>
                 </div>
               </a>
             </li>
@@ -614,7 +630,7 @@
       </article>
     </section>
 
-    <!-- EVENT -->
+    <!-- 이벤트 -->
     <section id="event">
       <h2 class="h-font">이벤트</h2>
       <div class="e-line">&nbsp;</div>
@@ -643,50 +659,43 @@
       </article>
     </section>
 
+    <!-- 커뮤니티 -->
     <article id="community">
       <h2 class="h-font"><i class="fa-brands fa-instagram"></i>instagram</h2>
       <p>인스타그램을 통해<br>다양한 시장소식을 살펴보세요.</p>
       <div class="swiper comunitys">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <!-- <div class="c-img"> -->
-              <a href="#" title="인스타그램 바로가기">
-                <img src="./m_images/community01.jpg" alt="인스타그램1" class="img-area">
-              </a>
+            <a href="#" title="인스타그램 바로가기">
+              <img src="./m_images/community01.jpg" alt="인스타그램1" class="img-area">
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="c-img">
-              <a href="#" title="인스타그램 바로가기">
-                <img src="./m_images/community02.jpg" alt="인스타그램2" class="img-area">
-              </a>
-            </div>
+            <a href="#" title="인스타그램 바로가기">
+              <img src="./m_images/community02.jpg" alt="인스타그램2" class="img-area">
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="c-img">
-              <a href="#" title="인스타그램 바로가기">
-                <img src="./m_images/community03.jpg" alt="인스타그램3" class="img-area">
-              </a>
-            </div>
+            <a href="#" title="인스타그램 바로가기">
+              <img src="./m_images/community03.jpg" alt="인스타그램3" class="img-area">
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="c-img">
-              <a href="#" title="인스타그램 바로가기">
-                <img src="./m_images/community04.jpg" alt="인스타그램4" class="img-area">
-              </a>
-            </div>
+            <a href="#" title="인스타그램 바로가기">
+              <img src="./m_images/community04.jpg" alt="인스타그램4" class="img-area">
+            </a>
           </div>
           <div class="swiper-slide">
-            <div class="c-img">
-              <a href="#" title="인스타그램 바로가기">
-                <img src="./m_images/community05.jpg" alt="인스타그램5" class="img-area">
-              </a>
-            </div>
+            <a href="#" title="인스타그램 바로가기">
+              <img src="./m_images/community05.jpg" alt="인스타그램5" class="img-area">
+            </a>
           </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
     </article>
 
+    <!-- TOP버튼 -->
     <aside>
       <a href="#">
         <i class="material-icons">arrow_upward</i>
@@ -694,6 +703,7 @@
     </aside>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <nav class="f-nav">
       <ul class="d-flex">
@@ -721,13 +731,14 @@
     <div class="inq d-flex">
       <dl>
         <dt>고객센터</dt>
-        <dd>02-234-5678</dd>
+        <dd><a href="tel:02-123-4567" title="고객센터 전화연결">02-123-4567</a></dd>
         <dd>(월~금 9:00~19:00)</dd>
       </dl>
-      <dl> 
+      <dl>
         <dt>입점문의</dt>
-        <dd>02-123-4567</dd>
+        <dd><a href="tel:02-234-5678" title="입점문의 전화연결">02-234-5678</a></dd>
         <dd>(월~금 9:00~19:00)</dd>
+        </a>
       </dl>
     </div>
 
@@ -740,6 +751,5 @@
       <p>Copyright &copy; 2023 AREYOUHUNGRY All rights reserved.</p>
     </address>
   </footer>
-  
 </body>
 </html>
