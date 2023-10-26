@@ -1,69 +1,66 @@
 $(document).ready(function(){
 
-    // 스크롤 효과
-    $(window).scroll(function(){
-    
-      let sPos = $(this).scrollTop();
-      console.log(sPos);
+  // 스크롤 효과
+  $(window).scroll(function(){
+    let sPos = Math.floor(($(this).scrollTop() / ($(document).height() - $(this).height())) *100);
+    console.log(sPos);
+
+    function scrollEffect (){
       
       // TOP버튼
-      if(sPos>=580){
+      if(sPos >= 18){
         $('aside a').fadeIn();
       }else{
-        $('aside a').fadeOut();}
-  
-      $('aside a').click(function(){
-        $('html, body').animate({scrollTop:'0px'},300);
-        return false;
-      });
+        $('aside a').fadeOut();
+      };
 
-      if(sPos >= 2944) {
+      if(sPos >= 88) {
         $('aside a').css({'position':'absolute'});
       } else {
         $('aside a').css({'position':'fixed'});
       }
-  
+
       // 시장정보
-      if(sPos >= 100) {
+      if(sPos >= 2) {
         $('#location h2').css('top','50px').animate({'opacity':'1','top':'0'},1000);
-        $('#location > p').css('top','30px').delay(400).animate({'opacity':'1','top':'0'},1000);
+        $('#location > p').css('top','50px').animate({'opacity':'1','top':'0'},1400);
       };
   
       // 추천가이드
-      if(sPos >= 800) {
+      if(sPos >= 22) {
         $('#guide h2').css('top','50px').animate({'opacity':'1','top':'0'},1000)
-        $('#guide > p').css('top','30px').delay(400).animate({'opacity':'1','top':'0'},1000,function(){
-          $('.g-line').animate({'right':'0','width':'80%'},400);
+        $('#guide > p').css('top','50px').animate({'opacity':'1','top':'0'},1400,function(){
+          $('.g-line').animate({'right':'0','width':'80%'});
         });
       };
   
       // 동네상점
-      if(sPos >= 1450) {
+      if(sPos >= 43) {
         $('#product h2').css('top','50px').animate({'opacity':'1','top':'0'},1000);
-        $('#product > p').css('top','30px').delay(400).animate({'opacity':'1','top':'0'},1000,function(){
-          $('.p-line').animate({'right':'0','width':'60%'},500);
+        $('#product > p').css('top','50px').animate({'opacity':'1','top':'0'},1400,function(){
+          $('.p-line').animate({'right':'0','width':'60%'},800);
         });
       };
   
       // 이벤트
-      if(sPos >= 2100) {
+      if(sPos >= 64) {
         $('#event .e-line').animate({'width':'100px'},600);
       };
-  
-      // 뉴스
-      if(sPos >= 2300) {
+      // 시장뉴스
+      if(sPos >= 73) {
         $('.e-news').animate({'height':'220px'},1000);
         $('.e-news ul').animate({'opacity':'1'},800);
       };
     
       // 인스타그램
-      if(sPos >= 2630) {
+      if(sPos >= 79) {
         $('#community h2').css('top','50px').animate({'opacity':'1','top':'0'},1000);
-        $('#community p').css('top','30px').delay(400).animate({'opacity':'1','top':'0'},1000);
+        $('#community p').css('top','50px').animate({'opacity':'1','top':'0'},1400);
       };
-      
-    });
-
+    }
+    let TimerS = setTimeout(scrollEffect);
+  });
+  
   ////// HEADER //////
 
   const menu = $('i.fa-bars');
@@ -371,6 +368,13 @@ $(document).ready(function(){
         spaceBetween: 10,
       },
     }
+  });
+
+  ////// Top 버튼 //////
+
+  $('aside a').click(function(){
+    $('html, body').animate({scrollTop:'0px'},300);
+    return false;
   });
 
 });
