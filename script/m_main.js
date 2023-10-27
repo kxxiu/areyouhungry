@@ -367,6 +367,10 @@ $(document).ready(function(){
         slidesPerView: 2,
         spaceBetween: 10,
       },
+      680:{
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
     }
   });
 
