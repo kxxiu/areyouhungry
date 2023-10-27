@@ -304,6 +304,7 @@ button{
   border: 1px solid var(--footer-color);
   border-radius: 50px;
   color: #3D2D29;
+  font-size: 15px;
   text-indent: 10px;
   text-align: left;
   line-height: 33px;
