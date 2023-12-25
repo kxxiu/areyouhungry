@@ -118,8 +118,7 @@
 }
 .l-list .swiper-slide span{
   display:block;
-  position:absolute;bottom:10px;
-  width:100%;
+  transform: translateY(18px);
   text-align:center;
 }
 #location .swiper-button-prev, #location .swiper-button-next {
@@ -248,7 +247,7 @@ i.kyungnam{background-position: -564px -71px;}
 }
 #guide .swiper{
   background-image: url(../m_images/guide_bg.png);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: 100% 53%;
   text-align: center;
 }
@@ -296,7 +295,7 @@ i.kyungnam{background-position: -564px -71px;}
   border: 8px solid transparent;
   border-bottom: 8px solid #D2D2D2;
   position: absolute;
-  left: 48%;top: 89px;
+  left: calc(50% - 8px);top: 89px;
   animation: twinkle 0.4s ease-in-out infinite;
 }
 @keyframes twinkle {
